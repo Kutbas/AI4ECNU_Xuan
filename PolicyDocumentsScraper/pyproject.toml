@@ -1,0 +1,22 @@
+[project]
+name = "policy-documents-scraper"
+version = "0.1.0"
+description = "教育部政府门户网站政策文件增量爬虫：列表抓取 + zip 下载解压 + 定时更新"
+readme = "README.md"
+authors = [
+    { name = "ROG STRIX", email = "1820533976@qq.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "lxml>=6.1.3",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+scraper = "policy_documents_scraper.cli:main"
+policy-documents-scraper = "policy_documents_scraper.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
